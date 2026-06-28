@@ -293,8 +293,10 @@ section{padding:clamp(80px,12vw,140px) clamp(20px,5vw,80px)}
 .showcase-slot{aspect-ratio:4/3;background:var(--c-surface);border:1px dashed var(--c-border);border-radius:var(--r-lg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;cursor:pointer;transition:var(--transition);position:relative;overflow:hidden}
 .showcase-slot:hover{border-color:var(--c-accent);border-style:solid}
 .showcase-slot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:var(--r-lg)}
-.showcase-slot .overlay-hint{position:absolute;inset:0;background:rgba(10,6,8,0.7);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;opacity:0;transition:var(--transition)}
+.showcase-slot .overlay-hint{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,6,8,0.9) 0%,rgba(10,6,8,0.3) 60%,transparent 100%);display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding-bottom:24px;gap:6px;opacity:0;transition:var(--transition);border-radius:var(--r-lg)}
 .showcase-slot:hover .overlay-hint{opacity:1}
+.showcase-slot:hover img{transform:scale(1.04);transition:transform 0.5s ease}
+.showcase-slot img{transition:transform 0.5s ease}
 .showcase-placeholder{display:flex;flex-direction:column;align-items:center;gap:10px}
 .showcase-placeholder span{font-size:40px;opacity:0.2}
 .showcase-placeholder p{font-size:12px;color:var(--c-dim);font-family:var(--f-mono)}
@@ -744,7 +746,11 @@ footer{background:var(--c-bg2);border-top:1px solid var(--c-border);padding:40px
       <!-- PROJECT 3 -->
       <div class="project-card reveal reveal-delay-3">
         <div class="project-image">
-          <img id="proj3-img" class="project-image-slot" src="https://raw.githubusercontent.com/tejas-ds6/tejas-ds6.github.io/main/image.png" alt="AI Job Matcher" style="display:block;width:100%;height:100%;object-fit:cover;position:absolute;inset:0"/>
+          <div class="project-image-placeholder" id="proj3-placeholder" style="display:flex">
+            <span class="proj-emoji">🤖</span>
+            <p style="font-size:11px;color:var(--c-dim);font-family:var(--f-mono)">Coming Soon</p>
+          </div>
+          <img id="proj3-img" class="project-image-slot" style="display:none" alt="AI Job Matcher"/>
           <span class="project-num">03</span>
           <button class="proj-upload-btn" onclick="document.getElementById('proj3-img-input').click()">📷 Add Screenshot</button>
         </div>
@@ -907,18 +913,34 @@ footer{background:var(--c-bg2);border-top:1px solid var(--c-border);padding:40px
       <p class="section-sub">Upload 3D renders, architecture diagrams, lab photos, or project visuals to elevate your portfolio.</p>
     </div>
     <div class="showcase-grid">
-      <div class="showcase-slot reveal reveal-delay-1" id="showcase1-slot" style="cursor:default">
-        <img src="https://raw.githubusercontent.com/tejas-ds6/tejas-ds6.github.io/main/IIT%20madras.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:var(--r-lg)" alt="Showcase"/>
-        <div class="overlay-hint"><span style="font-size:13px;color:white;font-family:var(--f-mono)">IIT Madras</span></div>
+
+      <!-- Slot 1: Aviocast Club Logo -->
+      <div class="showcase-slot reveal reveal-delay-1" id="showcase1-slot">
+        <img src="https://raw.githubusercontent.com/tejas-ds6/tejas-ds6.github.io/main/logo.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;border-radius:var(--r-lg)" alt="Aviocast Club Logo"/>
+        <div class="overlay-hint">
+          <span style="font-size:14px;font-weight:700;color:white;font-family:var(--f-mono);letter-spacing:2px;text-transform:uppercase;text-shadow:0 2px 8px rgba(0,0,0,0.8)">Aviocast · The Avionics Club</span>
+          <span style="font-size:11px;color:rgba(255,255,255,0.7);font-family:var(--f-mono)">Club Coordinator</span>
+        </div>
       </div>
-      <div class="showcase-slot reveal reveal-delay-2" id="showcase2-slot" style="cursor:default">
-        <img src="https://raw.githubusercontent.com/tejas-ds6/tejas-ds6.github.io/main/logo.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:var(--r-lg)" alt="Showcase"/>
-        <div class="overlay-hint"><span style="font-size:13px;color:white;font-family:var(--f-mono)">Logo</span></div>
+
+      <!-- Slot 2: IIT Madras Admission Letter -->
+      <div class="showcase-slot reveal reveal-delay-2" id="showcase2-slot">
+        <img src="https://raw.githubusercontent.com/tejas-ds6/tejas-ds6.github.io/main/IIT%20madras.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center;border-radius:var(--r-lg)" alt="IIT Madras Admission Letter"/>
+        <div class="overlay-hint">
+          <span style="font-size:14px;font-weight:700;color:white;font-family:var(--f-mono);letter-spacing:2px;text-transform:uppercase;text-shadow:0 2px 8px rgba(0,0,0,0.8)">IIT Madras</span>
+          <span style="font-size:11px;color:rgba(255,255,255,0.7);font-family:var(--f-mono)">B.S. Data Science & Applications</span>
+        </div>
       </div>
-      <div class="showcase-slot reveal reveal-delay-3" id="showcase3-slot" style="cursor:default">
-        <img src="https://raw.githubusercontent.com/tejas-ds6/tejas-ds6.github.io/main/sentimentscope.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:var(--r-lg)" alt="Showcase"/>
-        <div class="overlay-hint"><span style="font-size:13px;color:white;font-family:var(--f-mono)">SentimentScope</span></div>
+
+      <!-- Slot 3: DRDO IR/Thermal Imaging Work -->
+      <div class="showcase-slot reveal reveal-delay-3" id="showcase3-slot">
+        <img src="https://raw.githubusercontent.com/tejas-ds6/tejas-ds6.github.io/main/image.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;border-radius:var(--r-lg);filter:grayscale(20%) contrast(1.1)" alt="DRDO IR Imaging Work"/>
+        <div class="overlay-hint">
+          <span style="font-size:14px;font-weight:700;color:white;font-family:var(--f-mono);letter-spacing:2px;text-transform:uppercase;text-shadow:0 2px 8px rgba(0,0,0,0.8)">DRDO · IR Imaging</span>
+          <span style="font-size:11px;color:rgba(255,255,255,0.7);font-family:var(--f-mono)">Defence Research & Development</span>
+        </div>
       </div>
+
     </div>
   </div>
 </section>
