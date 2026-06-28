@@ -497,12 +497,8 @@ footer{background:var(--c-bg2);border-top:1px solid var(--c-border);padding:40px
   <div class="section-inner">
     <div class="about-grid">
       <div class="about-image-wrap reveal-left">
-        <div class="about-image-slot" id="about-image-slot">
-          <div class="image-upload-hint">
-            <div class="upload-icon">🧑‍💻</div>
-            <div class="upload-label">Your Photo</div>
-            <button class="upload-btn-small" onclick="document.getElementById('about-img-input').click()">+ Upload Photo</button>
-          </div>
+        <div class="about-image-slot has-image" id="about-image-slot">
+          <img src="https://raw.githubusercontent.com/tejas-ds6/tejas-ds6.github.io/main/photo.png" alt="Tejas D S" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:var(--r-lg)"/>
         </div>
         <div class="about-image-deco"></div>
         <div class="about-image-deco2"></div>
@@ -690,11 +686,7 @@ footer{background:var(--c-bg2);border-top:1px solid var(--c-border);padding:40px
       <!-- PROJECT 1 -->
       <div class="project-card reveal reveal-delay-1">
         <div class="project-image">
-          <div class="project-image-placeholder" id="proj1-placeholder">
-            <span class="proj-emoji">🎯</span>
-            <p style="font-size:11px;color:var(--c-dim);font-family:var(--f-mono)">Click to add screenshot</p>
-          </div>
-          <img id="proj1-img" class="project-image-slot" style="display:none" alt="SentimentScope"/>
+          <img id="proj1-img" class="project-image-slot" src="https://raw.githubusercontent.com/tejas-ds6/tejas-ds6.github.io/main/sentimentscope.png" alt="SentimentScope" style="display:block;width:100%;height:100%;object-fit:cover;position:absolute;inset:0"/>
           <span class="project-num">01</span>
           <button class="proj-upload-btn" onclick="document.getElementById('proj1-img-input').click()">📷 Add Screenshot</button>
         </div>
@@ -723,11 +715,7 @@ footer{background:var(--c-bg2);border-top:1px solid var(--c-border);padding:40px
       <!-- PROJECT 2 -->
       <div class="project-card reveal reveal-delay-2">
         <div class="project-image">
-          <div class="project-image-placeholder" id="proj2-placeholder">
-            <span class="proj-emoji">📚</span>
-            <p style="font-size:11px;color:var(--c-dim);font-family:var(--f-mono)">Click to add screenshot</p>
-          </div>
-          <img id="proj2-img" class="project-image-slot" style="display:none" alt="DocuBot"/>
+          <img id="proj2-img" class="project-image-slot" src="https://raw.githubusercontent.com/tejas-ds6/tejas-ds6.github.io/main/Docubot.png" alt="DocuBot" style="display:block;width:100%;height:100%;object-fit:cover;position:absolute;inset:0"/>
           <span class="project-num">02</span>
           <button class="proj-upload-btn" onclick="document.getElementById('proj2-img-input').click()">📷 Add Screenshot</button>
         </div>
@@ -756,11 +744,7 @@ footer{background:var(--c-bg2);border-top:1px solid var(--c-border);padding:40px
       <!-- PROJECT 3 -->
       <div class="project-card reveal reveal-delay-3">
         <div class="project-image">
-          <div class="project-image-placeholder" id="proj3-placeholder">
-            <span class="proj-emoji">🤖</span>
-            <p style="font-size:11px;color:var(--c-dim);font-family:var(--f-mono)">Click to add screenshot</p>
-          </div>
-          <img id="proj3-img" class="project-image-slot" style="display:none" alt="AI Job Matcher"/>
+          <img id="proj3-img" class="project-image-slot" src="https://raw.githubusercontent.com/tejas-ds6/tejas-ds6.github.io/main/image.png" alt="AI Job Matcher" style="display:block;width:100%;height:100%;object-fit:cover;position:absolute;inset:0"/>
           <span class="project-num">03</span>
           <button class="proj-upload-btn" onclick="document.getElementById('proj3-img-input').click()">📷 Add Screenshot</button>
         </div>
@@ -871,8 +855,8 @@ footer{background:var(--c-bg2);border-top:1px solid var(--c-border);padding:40px
     </div>
     <div class="cert-grid">
       <div class="cert-card reveal reveal-delay-1">
-        <div class="cert-image-slot" onclick="document.getElementById('cert1-img-input').click()" id="cert1-slot">
-          <div class="cert-img-placeholder"><span>🏅</span><p>Upload Certificate</p></div>
+        <div class="cert-image-slot" id="cert1-slot" style="cursor:default">
+          <img src="https://raw.githubusercontent.com/tejas-ds6/tejas-ds6.github.io/main/IIRS%20certificate.png" alt="ISRO IIRS Certificate" style="width:100%;height:100%;object-fit:cover;border-radius:var(--r-sm)"/>
         </div>
         <div class="cert-body">
           <div class="cert-badge">🌟 Merit</div>
@@ -881,8 +865,8 @@ footer{background:var(--c-bg2);border-top:1px solid var(--c-border);padding:40px
         </div>
       </div>
       <div class="cert-card reveal reveal-delay-2">
-        <div class="cert-image-slot" onclick="document.getElementById('cert2-img-input').click()" id="cert2-slot">
-          <div class="cert-img-placeholder"><span>🛡️</span><p>Upload Certificate</p></div>
+        <div class="cert-image-slot" id="cert2-slot" style="cursor:default">
+          <img src="https://raw.githubusercontent.com/tejas-ds6/tejas-ds6.github.io/main/DRDO%20certificate.jpeg" alt="DRDO Certificate" style="width:100%;height:100%;object-fit:cover;border-radius:var(--r-sm)"/>
         </div>
         <div class="cert-body">
           <div class="cert-badge">🔒 Govt.</div>
@@ -891,8 +875,8 @@ footer{background:var(--c-bg2);border-top:1px solid var(--c-border);padding:40px
         </div>
       </div>
       <div class="cert-card reveal reveal-delay-3">
-        <div class="cert-image-slot" onclick="document.getElementById('cert3-img-input').click()" id="cert3-slot">
-          <div class="cert-img-placeholder"><span>🚁</span><p>Upload Certificate</p></div>
+        <div class="cert-image-slot" id="cert3-slot" style="cursor:default">
+          <img src="https://raw.githubusercontent.com/tejas-ds6/tejas-ds6.github.io/main/garuda%20certiificate.png" alt="Garuda Aerospace Certificate" style="width:100%;height:100%;object-fit:cover;border-radius:var(--r-sm)"/>
         </div>
         <div class="cert-body">
           <div class="cert-badge">✈️ Aerospace</div>
@@ -901,8 +885,8 @@ footer{background:var(--c-bg2);border-top:1px solid var(--c-border);padding:40px
         </div>
       </div>
       <div class="cert-card reveal reveal-delay-4">
-        <div class="cert-image-slot" onclick="document.getElementById('cert4-img-input').click()" id="cert4-slot">
-          <div class="cert-img-placeholder"><span>🛸</span><p>Upload Certificate</p></div>
+        <div class="cert-image-slot" id="cert4-slot" style="cursor:default">
+          <img src="https://raw.githubusercontent.com/tejas-ds6/tejas-ds6.github.io/main/IISTINTERN.jpg" alt="IIST Certificate" style="width:100%;height:100%;object-fit:cover;border-radius:var(--r-sm)"/>
         </div>
         <div class="cert-body">
           <div class="cert-badge">🚀 Space</div>
@@ -923,20 +907,17 @@ footer{background:var(--c-bg2);border-top:1px solid var(--c-border);padding:40px
       <p class="section-sub">Upload 3D renders, architecture diagrams, lab photos, or project visuals to elevate your portfolio.</p>
     </div>
     <div class="showcase-grid">
-      <div class="showcase-slot reveal reveal-delay-1" id="showcase1-slot" onclick="document.getElementById('showcase1-input').click()">
-        <div class="showcase-placeholder"><span>🧊</span><p>3D Render / Architecture</p></div>
-        <div class="overlay-hint"><button class="change-btn">📷 Upload Image</button><span style="font-size:11px;color:var(--c-muted);font-family:var(--f-mono)">Any format</span></div>
-        <img id="showcase1-img" style="display:none;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:var(--r-lg)" alt="Showcase 1"/>
+      <div class="showcase-slot reveal reveal-delay-1" id="showcase1-slot" style="cursor:default">
+        <img src="https://raw.githubusercontent.com/tejas-ds6/tejas-ds6.github.io/main/IIT%20madras.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:var(--r-lg)" alt="Showcase"/>
+        <div class="overlay-hint"><span style="font-size:13px;color:white;font-family:var(--f-mono)">IIT Madras</span></div>
       </div>
-      <div class="showcase-slot reveal reveal-delay-2" id="showcase2-slot" onclick="document.getElementById('showcase2-input').click()">
-        <div class="showcase-placeholder"><span>🏗️</span><p>System Diagram / Flowchart</p></div>
-        <div class="overlay-hint"><button class="change-btn">📷 Upload Image</button><span style="font-size:11px;color:var(--c-muted);font-family:var(--f-mono)">Any format</span></div>
-        <img id="showcase2-img" style="display:none;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:var(--r-lg)" alt="Showcase 2"/>
+      <div class="showcase-slot reveal reveal-delay-2" id="showcase2-slot" style="cursor:default">
+        <img src="https://raw.githubusercontent.com/tejas-ds6/tejas-ds6.github.io/main/logo.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:var(--r-lg)" alt="Showcase"/>
+        <div class="overlay-hint"><span style="font-size:13px;color:white;font-family:var(--f-mono)">Logo</span></div>
       </div>
-      <div class="showcase-slot reveal reveal-delay-3" id="showcase3-slot" onclick="document.getElementById('showcase3-input').click()">
-        <div class="showcase-placeholder"><span>📡</span><p>Lab / Research Photo</p></div>
-        <div class="overlay-hint"><button class="change-btn">📷 Upload Image</button><span style="font-size:11px;color:var(--c-muted);font-family:var(--f-mono)">Any format</span></div>
-        <img id="showcase3-img" style="display:none;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:var(--r-lg)" alt="Showcase 3"/>
+      <div class="showcase-slot reveal reveal-delay-3" id="showcase3-slot" style="cursor:default">
+        <img src="https://raw.githubusercontent.com/tejas-ds6/tejas-ds6.github.io/main/sentimentscope.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:var(--r-lg)" alt="Showcase"/>
+        <div class="overlay-hint"><span style="font-size:13px;color:white;font-family:var(--f-mono)">SentimentScope</span></div>
       </div>
     </div>
   </div>
