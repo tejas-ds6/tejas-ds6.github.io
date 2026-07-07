@@ -476,16 +476,8 @@ footer{background:var(--c-bg2);border-top:1px solid var(--c-border);padding:40px
         <span class="hero-stat-num" data-count="3">0</span>
         <span class="hero-stat-label">Live Projects</span>
       </div>
-      <div class="hero-stat-divider"></div>
-      <div class="hero-stat">
-        <span class="hero-stat-num" data-count="87">0</span>
-        <span class="hero-stat-label">Model Accuracy %</span>
-      </div>
-      <div class="hero-stat-divider"></div>
-      <div class="hero-stat">
-        <span class="hero-stat-num" data-count="200">0</span>
-        <span class="hero-stat-label">DRDO Pages Indexed</span>
-      </div>
+
+
     </div>
   </div>
   <div class="hero-scroll">
@@ -554,10 +546,7 @@ footer{background:var(--c-bg2);border-top:1px solid var(--c-border);padding:40px
       <p class="section-sub">From signal processing to transformer fine-tuning — full spectrum AI/ML engineering.</p>
     </div>
     <div class="counter-grid reveal">
-      <div class="counter-cell">
-        <div class="counter-num" data-count="87">0</div>
-        <div class="counter-lbl">Model Accuracy</div>
-      </div>
+
       <div class="counter-cell">
         <div class="counter-num" data-count="40">0</div>
         <div class="counter-lbl">Latency Reduced %</div>
@@ -566,10 +555,7 @@ footer{background:var(--c-bg2);border-top:1px solid var(--c-border);padding:40px
         <div class="counter-num" data-count="92">0</div>
         <div class="counter-lbl">Test Coverage %</div>
       </div>
-      <div class="counter-cell">
-        <div class="counter-num" data-count="200">0</div>
-        <div class="counter-lbl">DRDO Pages Indexed</div>
-      </div>
+
     </div>
     <div class="skills-grid">
       <div class="skill-group reveal reveal-delay-1">
@@ -727,7 +713,7 @@ footer{background:var(--c-bg2);border-top:1px solid var(--c-border);padding:40px
           <p class="project-desc">Full RAG pipeline: PDF → chunks → FAISS embeddings → local LLM (Mistral-7B) → cited answers. Used on 200+ pages of DRDO research documentation. 100% offline, zero API cost.</p>
           <div class="project-metrics">
             <div class="metric"><span class="metric-val">92%</span><span class="metric-lbl">Test Coverage</span></div>
-            <div class="metric"><span class="metric-val">200+</span><span class="metric-lbl">DRDO Pages</span></div>
+            <div class="metric"><span class="metric-val">100%</span><span class="metric-lbl">Offline RAG</span></div>
             <div class="metric"><span class="metric-val">&lt;10s</span><span class="metric-lbl">Query Time</span></div>
           </div>
           <div class="project-tech">
@@ -1372,15 +1358,11 @@ document.getElementById('resume-input').addEventListener('change', function() {
 });
 
 function downloadResume() {
-  if (resumeURL) {
-    const a = document.createElement('a');
-    a.href = resumeURL;
-    a.download = 'Tejas_DS_Resume.pdf';
-    a.click();
-  } else {
-    // Prompt to upload resume
-    document.getElementById('resume-input').click();
-  }
+  const a = document.createElement('a');
+  a.href = 'https://raw.githubusercontent.com/tejas-ds6/tejas-ds6.github.io/main/TEJASDS_RESUME.pdf';
+  a.download = 'Tejas_DS_Resume.pdf';
+  a.target = '_blank';
+  a.click();
 }
 
 // ═══════════════════════════════════════════
